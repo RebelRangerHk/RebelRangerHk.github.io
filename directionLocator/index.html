@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="top">
+		<h2 data-text="Direction-Aware Card's Indicator Hover Effects Task">Direction-Aware Card's Indicator Hover Effects Task</h2>
+	</div>
+	<div class="mid">
+		<div class="center">
+			<div class="lone">B</div>
+			<div class="ltwo">y</div>
+			<div class="lthree"> </div>
+			<div class="lfour">H</div>
+			<div class="lfive">a</div>
+			<div class="lsix">r</div>
+			<div class="lseven">i</div>
+			<div class="leight">s</div>
+			<div class="lnine">h</div>
+			<div class="lten"> </div>
+			<div class="leleven">K</div>
+			<div class="ltwelve">u</div>
+			<div class="lthirteen">m</div>
+			<div class="lfourteen">a</div>
+			<div class="lfiften">w</div>
+			<div class="lsixteen">a</div>
+			<div class="lseventeen">t</div>
+		</div>
+	</div>
+	<section>
+		<div class="container">
+			<div class="box one">
+				<q>
+					You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty
+				</q>
+				<div class="by"> -Mahatma <br> Gandhi</div>
+			</div>
+			<div class="box two">
+				<q>Any fool can write code that a computer can understand. Good programmers write code that humans can understand</q>
+				<div class="by"> -Martin <br> Fowler</div>
+			</div>
+			<div class="box three">
+				<q>
+					The mirror is my best friend because when I cry it never laughs
+				</q>
+				<div class="by"> -Charlie<br> Chaplin</div>
+			</div>
+			<div class="box four">
+				<q>
+					I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it
+				</q>
+				<div class="by"> -bill gates</div>
+			</div>
+			<div class="box five">
+				<q>
+					Success always hugs you in private..! But failure always slaps you in the public..! That’s Life
+				</q>
+				<div class="by"> -Sandeep<br> Maheshwari</div>
+			</div>
+			<div class="box six">
+				<q>
+					A person who never made a mistake never tried anything new.
+				</q>
+				<div class="by"> -Albert Einstein</div>
+			</div>
+			<div class="box seven">
+				<q>
+					The only limit to your impact is your imagination and commitment
+				</q>
+				<div class="by"> -Tony<br> Robbin</div>
+			</div>
+			<div class="marker"></div>
+		</div>
+	</section>
+<script src="jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.one').mouseover(function() {
+        document.querySelector('.marker').style.top = document.querySelector('.one').offsetTop + "px";
+        document.querySelector('.marker').style.width = document.querySelector('.one').offsetWidth + "px";
+        document.querySelector('.marker').style.height = document.querySelector('.one').offsetHeight + "px";
+        document.querySelector('.marker').style.left = document.querySelector('.one').offsetLeft + "px";
+    });
+    $('.two').mouseover(function() {
+        document.querySelector('.marker').style.top = document.querySelector('.two').offsetTop + "px";
+        document.querySelector('.marker').style.width = document.querySelector('.two').offsetWidth + "px";
+        document.querySelector('.marker').style.height = document.querySelector('.two').offsetHeight + "px";
+        document.querySelector('.marker').style.left = document.querySelector('.two').offsetLeft + "px";
+    });
+    $('.three').mouseover(function() {
+        document.querySelector('.marker').style.top = document.querySelector('.three').offsetTop + "px";
+        document.querySelector('.marker').style.width = document.querySelector('.three').offsetWidth + "px";
+        document.querySelector('.marker').style.height = document.querySelector('.three').offsetHeight + "px";
+        document.querySelector('.marker').style.left = document.querySelector('.three').offsetLeft + "px";
+    });
+    $('.four').mouseover(function() {
+        document.querySelector('.marker').style.top = document.querySelector('.four').offsetTop + "px";
+        document.querySelector('.marker').style.width = document.querySelector('.four').offsetWidth + "px";
+        document.querySelector('.marker').style.height = document.querySelector('.four').offsetHeight + "px";
+        document.querySelector('.marker').style.left = document.querySelector('.four').offsetLeft + "px";
+    });
+    $('.five').mouseover(function() {
+        document.querySelector('.marker').style.top = document.querySelector('.five').offsetTop + "px";
+        document.querySelector('.marker').style.width = document.querySelector('.five').offsetWidth + "px";
+        document.querySelector('.marker').style.height = document.querySelector('.five').offsetHeight + "px";
+        document.querySelector('.marker').style.left = document.querySelector('.five').offsetLeft + "px";
+    });
+    $('.six').mouseover(function() {
+        document.querySelector('.marker').style.top = document.querySelector('.six').offsetTop + "px";
+        document.querySelector('.marker').style.width = document.querySelector('.six').offsetWidth + "px";
+        document.querySelector('.marker').style.height = document.querySelector('.six').offsetHeight + "px";
+        document.querySelector('.marker').style.left = document.querySelector('.six').offsetLeft + "px";
+    });
+    $('.seven').mouseover(function() {
+        document.querySelector('.marker').style.top = document.querySelector('.seven').offsetTop + "px";
+        document.querySelector('.marker').style.width = document.querySelector('.seven').offsetWidth + "px";
+        document.querySelector('.marker').style.height = document.querySelector('.seven').offsetHeight + "px";
+        document.querySelector('.marker').style.left = document.querySelector('.seven').offsetLeft + "px";
+    });
+});
+gsap.timeline ({
+		scrollTrigger: {
+			trigger: "section",
+			start: "center center",
+			end: "bottom top",
+			pin: true,
+			scrub: true,
+		}
+	})
+	.from(".one" , {height : 0})
+	.from(".two" , {width : 0})
+	.from(".three" , {height : 0})
+	.from(".four" , {height : 0})
+	.from(".five" , {height : 0})
+	.from(".six" , {width : 0})
+	.from(".seven" , {width : 0})
+
+gsap.timeline({
+	scrollTrigger: {
+		trigger: ".mid",
+		start: "center center",
+		end: "bottom top",
+		pin: true,
+		scrub: true
+	}
+})
+.from(".lseventeen" , {rotate: 360,x: innerWidth * -1})
+.from(".lsixteen" , {rotate: 360,y: innerHeight * 1})
+.from(".lfiften" , {rotate: 360,x: innerWidth * -1})
+.from(".lfourteen" , {rotate: 360,y: innerHeight * 1})
+.from(".lthirteen" , {rotate: 360,x: innerWidth * -1})
+.from(".ltwelve" , {rotate: 360,y: innerHeight * 1})
+.from(".leleven" , {rotate: 360,x: innerWidth * -1})
+.from(".lten" , {rotate: 360,y: innerHeight * 1})
+.from(".lnine" , {rotate: 360,x: innerWidth * -1})
+.from(".leight" , {rotate: 360,y: innerHeight * 1})
+.from(".lseven" , {rotate: 360,x: innerWidth * -1})
+.from(".lsix" , {rotate: 360,y: innerHeight * 1})
+.from(".lfive" , {rotate: 360,x: innerWidth * -1})
+.from(".lfour" , {rotate: 360,y: innerHeight * 1})
+.from(".lthree" , {rotate: 360,x: innerWidth * -1})
+.from(".ltwo" , {rotate: 360,y: innerHeight * 1})
+.from(".lone" , {rotate: 360,x: innerWidth * -1})
+</script>
+</body>
+</html>
